@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:1.2
 
-ARG VERSION=2.7.2
+ARG VERSION=2.7.3
 
 
 FROM caddy:$VERSION-builder-alpine AS builder
