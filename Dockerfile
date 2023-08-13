@@ -10,7 +10,6 @@ ARG CADDY_VERSION
 RUN --mount=type=cache,target=/go/pkg/mod \
     xcaddy build v${CADDY_VERSION} \
     --with github.com/caddy-dns/cloudflare \
-    --with github.com/mastercactapus/caddy2-proxyprotocol \
     --with github.com/mholt/caddy-ratelimit \
     --with github.com/greenpau/caddy-security
 
