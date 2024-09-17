@@ -27,3 +27,4 @@ FROM scratch AS final
 
 COPY --from=final-debug /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+ENTRYPOINT /usr/bin/caddy
