@@ -28,4 +28,8 @@ FROM scratch AS final
 
 COPY --from=final-debug /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+
+# See https://caddyserver.com/docs/conventions#file-locations for details
+ENV XDG_CONFIG_HOME /config
+ENV XDG_DATA_HOME /data
 ENTRYPOINT ["/usr/bin/caddy"]
