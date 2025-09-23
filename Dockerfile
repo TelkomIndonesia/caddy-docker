@@ -10,9 +10,10 @@ ARG CADDY_VERSION
 RUN --mount=type=cache,target=/go/pkg/mod \
     xcaddy build v${CADDY_VERSION} \
     --with github.com/caddy-dns/cloudflare \
-    --with github.com/gerolf-vent/caddy-vault-storage \
-    --with github.com/ss098/certmagic-s3 \
     --with github.com/mohammed90/caddy-encrypted-storage \
+    --with github.com/ss098/certmagic-s3 \
+    --with github.com/gerolf-vent/caddy-vault-storage \
+    --with github.com/mentimeter/caddy-storage-cf-kv \
     --with github.com/greenpau/caddy-security \
     --with github.com/mholt/caddy-ratelimit \
     --with github.com/mholt/caddy-l4 \
